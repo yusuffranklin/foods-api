@@ -1,4 +1,4 @@
-CREATE DATABASE foods;
+CREATE DATABASE foodsdb;
 
 CREATE TABLE foods (
     id SERIAL PRIMARY KEY,
