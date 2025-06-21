@@ -9,7 +9,7 @@ RUN go mod download
 
 COPY main.go .
 
-RUN CGO_ENABLED=0 GOOS=linux go build -o food-api
+RUN CGO_ENABLED=0 GOOS=linux go build -o foods-api
 
 FROM alpine:3.22.0
 
@@ -17,6 +17,6 @@ WORKDIR /app
 
 ENV PORT=8080
 
-COPY --from=build /app/food-api .
+COPY --from=build /app/foods-api .
 
-ENTRYPOINT ["/app/food-api"]
+ENTRYPOINT ["/app/foods-api"]
