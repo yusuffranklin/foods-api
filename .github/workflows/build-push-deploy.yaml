@@ -1,9 +1,12 @@
 name: Build-Push-Deploy Dockerized App
 
 on:
+  # push:
+  #   branches:
+  #     - main
   push:
-    branches:
-      - main
+    tags:
+      - '*'
 
 jobs:
   build-push-deploy:

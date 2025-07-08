@@ -65,3 +65,11 @@ As you can see, the AWS services used are:
     -  Security groups for ELB: will allow all inbound traffic from anywhere to port 80.
     - Security groups for EC2: will open 8080 port to allow traffic from ELB, and will allow all outbound trafiic to allTCP ports.
     - Security groups for RDS: will open 5432 port to allow traffic from EC2.
+
+## How to Automatically Provision that AWS Resources
+
+You can simply run:
+```
+TF_VAR_rds_password=<your-password>
+terraform apply
+```
